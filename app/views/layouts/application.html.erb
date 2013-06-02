@@ -17,6 +17,7 @@
 
   	<%= stylesheet_link_tag    "application" %>
   	<%= javascript_include_tag "vendor/custom.modernizr" %>
+    <%= javascript_include_tag "backstretch" %>
     <%= csrf_meta_tags %>
   </head>
 
@@ -37,9 +38,29 @@
        </ul>
     </section>
     <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-        <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+        <li class="toggle-topbar menu-icon"><a href="#"><span>Login</span></a></li>
+      </ul>
+      <ul class="right">
+        <li class="divider"></li>
+        <li class="has-form">
+          <form>
+            <div class="row collapse">
+             <div class="small-4 columns">
+                <input type="text" name="email" placeholder="Email" class="radius">
+              </div>
+              <div class="small-4 columns">
+                <input type="password" name="password" placeholder="Password" class="radius">
+              </div>
+              <div class="small-4 columns">
+                <input type="submit" name="Login" value="Login" class="button radius">
+              </div>
+            </div>
+          </form>
+        </li>
       </ul>
     </nav>
+
+    
 
     <%= yield %>
 
