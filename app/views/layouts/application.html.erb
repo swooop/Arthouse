@@ -21,6 +21,25 @@
   </head>
 
   <body>
+    <nav class="top-bar">
+      <ul class="title-area">
+        <li class="name">
+          <h1><a href="#">The ARt house</a></h1>
+        </li>
+    <section class="top-bar-section">
+      <ul class="left">
+        <li class="divider"></li>
+        <%= nav_link 'Home', root_path %>
+        <li class="divider"></li>
+        <%= nav_link 'Artists', root_path %>
+        <li class="divider"></li>
+        <%= nav_link 'Galleries', root_path %>
+       </ul>
+    </section>
+    <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+        <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+      </ul>
+    </nav>
 
     <%= yield %>
 
