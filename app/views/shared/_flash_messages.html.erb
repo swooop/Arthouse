@@ -1,0 +1,9 @@
+<% if flash %>
+  <ul>
+  <% flash.each do |type, value| %>
+    <li class="<%= type %>">
+      <%= value %>
+    </li>
+  <% end %>
+  </ul>
+<% end %>
