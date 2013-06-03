@@ -4,7 +4,7 @@ class GalleriesController < ApplicationController
   end
 
   def show
-    @gallery = Gallery.find(params[:id])
+    @gallery = Gallery.includes(:user).find(params[:id])
   end
   def edit
     @gallery = Gallery.find(params[:id])

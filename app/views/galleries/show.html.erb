@@ -3,3 +3,11 @@
 <h2><%= @gallery.title %></h2>
 
 <p><%= @gallery.description %></p> 
+
+<div class="row">
+  <div>
+    <p><%= @gallery.user.name_full %></p>
+    <p><%= image_tag "http://gravatar.com/avatar/#{@gallery.user.email_as_md5}", {height: 80, width: 80, alt: "#{@gallery.user.name_full}'s profile image"} %></p>
+
+  </div>
+</div>

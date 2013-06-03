@@ -15,5 +15,9 @@ describe Gallery do
     expect(FactoryGirl.build(:gallery, title: nil)).not_to be_valid
   end
 
+  it "belongs to a user" do
+    expect(gallery.user).to be_an_instance_of(User)
+  end
+
 
 end
