@@ -1,4 +1,9 @@
 <h1>Site#index</h1>
+
+  <% if current_user %>
+    You are logged is as <%= current_user.name_first %>
+  <% end %>
+
 <!-- Picture box -->
   <div class="row">
     <div class="large-10 columns">
@@ -29,9 +34,7 @@
     <div class="small-2 colums">
       <h3>
 
-      <form>
-
-      </form>
+      </h3>
     </div>
   </div>
 
@@ -56,6 +59,3 @@
         <p> Really inspirational stuff about some totally hip stuff here. Buy me beer. </p>
       </article>
     </div>
-
-  </div>
-

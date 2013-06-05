@@ -35,6 +35,8 @@
         <%= nav_link 'Artists', root_path %>
         <li class="divider"></li>
         <%= nav_link 'Galleries', galleries_path %>
+        <li class="divider"></li>
+        <%= nav_link "Sign Up", signup_path %>
        </ul>
     </section>
     <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
@@ -43,19 +45,17 @@
       <ul class="right">
         <li class="divider"></li>
         <li class="has-form">
-          <form>
+          <%= form_tag login_path do %>
             <div class="row collapse">
-             <div class="small-4 columns">
-                <input type="text" name="email" placeholder="Email" class="radius">
+              <div class="small-4 columns">
+                <%= text_field_tag :email, params[:email], :placeholder => 'Email' %>
               </div>
               <div class="small-4 columns">
-                <input type="password" name="password" placeholder="Password" class="radius">
+                <%= password_field_tag :password, "Password" %>
               </div>
-              <div class="small-4 columns">
-                <input type="submit" name="Login" value="Login" class="button radius">
-              </div>
+              <div class=""><%= submit_tag "Log in", class: 'button' %></div>
             </div>
-          </form>
+          <% end %>
         </li>
       </ul>
     </nav>
@@ -63,6 +63,7 @@
     
 
     <%= yield %>
+
 
     
     <%= javascript_include_tag "application" %>
