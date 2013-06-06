@@ -6,6 +6,7 @@ gem 'rails', '3.2.13'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
+gem 'cocoon'
 
 group :development, :test do
   gem 'rspec-rails', '~> 2.0'
@@ -14,15 +15,18 @@ group :development, :test do
 
 end
 
+group :development do
+  gem 'pry-rails'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+end
+
 
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
-  gem 'better_errors'
-  gem 'binding_of_caller'
   gem 'zurb-foundation', '~> 4.0.0'
-
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby

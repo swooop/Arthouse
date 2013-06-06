@@ -20,11 +20,12 @@ class GalleriesController < ApplicationController
   end
 
   def new
-    @gallery = Gallery.new
+    @gallery = Gallery.new(images: [Image.new])
   end
 
   def create
     @gallery = Gallery.new(params[:gallery])
+    @gallery.user = current_user
     if @gallery.save
       redirect_to gallery_path(@gallery)
     else

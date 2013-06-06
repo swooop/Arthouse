@@ -4,3 +4,12 @@
   <%= f.text_area :title, :placeholder => 'Add or update a title' %>
   <%= f.text_area :description, :placeholder => 'Add or update the gallery description' %>
 
+  <h3>Images</h3>
+  <div id="images">
+    <%= f.fields_for :images do |image| %>
+      <%= render 'image_fields', :f => image %>
+    <% end %>
+    <div class="links">
+      <%= link_to_add_association 'add image', f, :images %>
+    </div>
+  </div>
