@@ -12,7 +12,7 @@ class User < ActiveRecord::Base
 
   has_secure_password
 
-  before_validation :downcase_email
+  before_save :downcase_email
 
   def name_full
     "#{self.name_first} #{self.name_last}"

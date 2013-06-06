@@ -11,14 +11,18 @@
   </div>
 
 <div class="row">
-
   <p><%= @gallery.description %></p> 
 </div>
 
 <div class="row">
-  <div>
+  <div class="small-6 columns">
     <p><%= @gallery.user.name_full %></p>
     <p><%= image_tag "http://gravatar.com/avatar/#{@gallery.user.email_as_md5}", {height: 80, width: 80, alt: "#{@gallery.user.name_full}'s profile image"} %></p>
+  </div>
+  <div class="small-6 columns">
+    <% for image in @gallery.images %>
+      <p><%= image_tag image.artwork_url.to_s %></p>
+    <% end %>
   </div>
 
 </div>

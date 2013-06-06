@@ -7,7 +7,7 @@ FactoryGirl.define do
   factory :user do |f|
     f.name_first        "Joe"
     f.name_last         "Userr"
-    f.email             
+    f.email           
     f.password          "123"
 
     factory :user_with_galleries do

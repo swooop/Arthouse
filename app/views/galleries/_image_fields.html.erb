@@ -8,6 +8,11 @@
     <%= f.label :description %> 
     <%= f.text_area :description %>
   </div>
+
+  <div class="field">
+    <%= f.label :artwork %>
+    <%= f.file_field :artwork %>
+  </div>
   
   <%= link_to_remove_association "remove image", f %>
 </div>
