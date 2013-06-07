@@ -1,0 +1,14 @@
+<h1>Artists#index</h1>
+<p>Find me in app/views/artists/index.html.erb</p>
+
+<% @users.each do |user| %>
+  <div>
+    <h4><%= user.name_first %></h4>
+    <p><% user.galleries.each do |gallery| %>
+      <%= link_to gallery.title, gallery %>
+    <% end %>
+    </p>
+  </div>
+<% end %>
+
+ 

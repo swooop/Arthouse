@@ -1,7 +1,7 @@
 Arthouse::Application.routes.draw do
-  
-  resources :galleries
 
+  resources :galleries
+  get     'artists/index' => 'artists#index', :as => :artists
   get     '/login' => 'sessions#new', :as => :login_form
   post    '/login' => 'sessions#create', :as => :login
   get     '/logout' => 'sessions#destroy', :as => :logout
