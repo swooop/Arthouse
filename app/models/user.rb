@@ -18,6 +18,7 @@ class User < ActiveRecord::Base
     "#{self.name_first} #{self.name_last}"
   end
 
+  #Supllies the md5 hash for gravatars
   def email_as_md5
     Digest::MD5.hexdigest(self.email)  
   end

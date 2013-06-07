@@ -36,27 +36,38 @@
         <li class="divider"></li>
         <%= nav_link 'Galleries', galleries_path %>
         <li class="divider"></li>
-        <%= nav_link "Sign Up", signup_path %>
+        <% unless current_user %>
+          <%= nav_link "Sign Up", signup_path %>
+        <% end %>
        </ul>
     </section>
     <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-        <li class="toggle-topbar menu-icon"><a href="#"><span>Login</span></a></li>
+        <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
       </ul>
-      <ul class="right">
-        <li class="divider"></li>
-        <li class="has-form">
-          <%= form_tag login_path do %>
-            <div class="row collapse">
-              <div class="small-4 columns">
-                <%= text_field_tag :email, params[:email], :placeholder => 'Email' %>
+      <div class="top-bar-section">
+        <ul class="right">
+          <li class="divider"></li>
+          <% if current_user %>
+              <li><%= link_to "You are logged is as #{current_user.name_first}", galleries_path %></li>
+              <li class="divider"></li>
+              <%= nav_link "Log Out", logout_path %>
+          <% else %>
+          <li class="divider"></li>
+          <li class="has-form">
+            <%= form_tag login_path do %>
+              <div class="row collapse">
+                <div class="small-4 columns">
+                  <%= text_field_tag :email, params[:email], :placeholder => 'Email' %>
+                </div>
+                <div class="small-4 columns">
+                  <%= password_field_tag :password, "Password" %>
+                </div>
+                  <%= submit_tag "Log in", class: 'button' %>
               </div>
-              <div class="small-4 columns">
-                <%= password_field_tag :password, "Password" %>
-              </div>
-              <div class=""><%= submit_tag "Log in", class: 'button' %></div>
-            </div>
+            <% end %>
           <% end %>
-        </li>
+        </div>
+          </li>
       </ul>
     </nav>
 
