@@ -12,8 +12,11 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.validate
+//= require backstretch
 //= require cocoon
 //= require foundation
 //= require_tree .
 
 $(document).foundation();
+

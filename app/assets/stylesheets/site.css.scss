@@ -1,3 +1,27 @@
 // Place all the styles related to the site controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+@font-face {
+    font-family: 'League Gothic';
+    src: font-url('leaguegothic-italic-webfont.eot');
+    src: font-url('leaguegothic-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         font-url('leaguegothic-italic-webfont.woff') format('woff'),
+         font-url('leaguegothic-italic-webfont.ttf') format('truetype'),
+         font-url('leaguegothic-italic-webfont.svg#league_gothic_italicregular') format('svg');
+    font-weight: normal;
+    font-style: italic;
+
+}
+
+body {
+  background-color: #d8e0e7;
+ // background: url('texturedbg.jpg') no-repeat center center fixed;
+
+}
+
+.logo {
+  font-family: 'League Gothic';
+  font-size: 4em;
+}
