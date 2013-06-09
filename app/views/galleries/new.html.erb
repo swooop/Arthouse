@@ -1,6 +1,6 @@
-<h2>Add a quality new gallery</h2>
+<h2>Create a new gallery</h2>
 
-<%= form_for @gallery, html: { multipart: true }, url: galleries_path do |f| %>
-  <%= render partial: 'fields', locals: { f: f } %>
+<%= form_for @gallery, html: { multipart: true, id: 'upload-form' }, url: galleries_path do |f| %>
+  <%= render partial: 'fields', locals: { f: f }, required: true %>
   <%= f.submit "Submit", class: 'button radius' %>
 <% end %>
