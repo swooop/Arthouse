@@ -11,14 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130606144348) do
+ActiveRecord::Schema.define(:version => 20130610140613) do
 
   create_table "galleries", :force => true do |t|
     t.string   "title"
     t.text     "description"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",                 :null => false
+    t.datetime "updated_at",                 :null => false
     t.integer  "user_id"
+    t.integer  "like_count",  :default => 0
   end
 
   create_table "images", :force => true do |t|

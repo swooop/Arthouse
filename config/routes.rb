@@ -1,6 +1,10 @@
 Arthouse::Application.routes.draw do
 
-  resources :galleries
+  resources :galleries do
+    member do
+      post '/like' => 'galleries#like'
+    end
+  end
   get     'artists/index' => 'artists#index', :as => :artists
   get     '/login' => 'sessions#new', :as => :login_form
   post    '/login' => 'sessions#create', :as => :login

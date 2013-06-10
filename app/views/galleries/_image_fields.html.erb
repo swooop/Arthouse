@@ -1,4 +1,6 @@
 <div class="nested-fields">
+
+
   <div class="field">
     <%= f.label :title %> 
     <%= f.text_field :title, required: true %>
@@ -13,6 +15,8 @@
     <%= f.label :artwork %>
     <%= f.file_field :artwork %>
   </div>
-  
+
+  <%# image_tag @gallery.image_url(:thumb).to_s %>
+
   <%= link_to_remove_association "remove image", f %>
 </div>

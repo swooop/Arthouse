@@ -8,6 +8,8 @@ gem 'rails', '3.2.13'
 gem 'sqlite3'
 gem 'cocoon'
 gem 'carrierwave'
+gem 'rmagick'
+gem 'fog'
 
 group :development, :test do
   gem 'rspec-rails', '~> 2.0'

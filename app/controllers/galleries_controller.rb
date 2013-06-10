@@ -1,4 +1,7 @@
 class GalleriesController < ApplicationController
+
+  before_filter :gallery_belongs_to_user, :only => [:edit, :update, :destroy]
+
   def index
     @galleries = Gallery.all
   end
@@ -8,11 +11,9 @@ class GalleriesController < ApplicationController
   end
   
   def edit
-    @gallery = Gallery.find(params[:id])
   end
 
   def update
-    @gallery = Gallery.find(params[:id])
     if @gallery.update_attributes(params[:gallery])
       redirect_to gallery_path(@gallery), flash: { notice: 'Updated!' }
     else
@@ -35,12 +36,30 @@ class GalleriesController < ApplicationController
   end
 
   def destroy
-    gallery = Gallery.find(params[:id])
-
     if gallery.delete
       redirect_to galleries_path, notice: "Deleted #{gallery.title}"
     else
       redirect_to gallery_path(@gallery), flash: { errors: gallery.errors }
     end
   end
+
+  def like
+    @gallery = Gallery.find(params[:id])
+    @gallery.like_count += 1
+    if @gallery.save
+      render :json => { success: true, like_count: @gallery.like_count }
+    else
+      render :json => { success: false }
+    end
+  end
+
+  private
+
+  def gallery_belongs_to_user
+    @gallery = Gallery.find(params[:id])
+    if current_user != @gallery.user       
+      redirect_to root_url, :notice => "Gallery does not belong to you."
+    end
+  end
+
 end

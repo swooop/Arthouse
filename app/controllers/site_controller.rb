@@ -3,4 +3,5 @@ class SiteController < ApplicationController
     @user = User.new
     @users = User.all
   end
+    
 end

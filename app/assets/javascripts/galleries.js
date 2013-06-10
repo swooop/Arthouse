@@ -3,3 +3,9 @@
 
 
 $("#upload-form").validate();
+
+var like = function(event, data) {
+  $(this).attr('disabled', 'disabled').attr('href', '#').find('span').text(data.like_count);
+};
+
+$('.like_button').bind('ajax:success', like);

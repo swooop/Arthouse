@@ -10,7 +10,7 @@
     <h3> Add a New Gallery </h3>
   </div>
   <div class="small-8 columns">
-    <%= link_to 'Add', new_gallery_path, class: 'button success round' %>
+    <%= link_to 'Add', new_gallery_path, class: 'button radius' %>
   </div>
 </div>
 
@@ -22,11 +22,19 @@
       <h4>
         <%= link_to gallery.title, gallery_path(gallery) %>
       </h4>
+      <%= image_tag gallery.images.first.artwork.url %>
       <p><%= gallery.description %></p>
-        <% if current_user.email  == gallery.user.email %>
-          <%= link_to 'Delete', gallery_path(gallery), method: :delete, confirm: 'Sure?', class: 'button tiny radius' %>
-          <%= link_to 'Edit', edit_gallery_path(gallery), class: 'button tiny radius' %>
-        <% end %>
+
+      <% if current_user != gallery.user %>
+        <%= link_to "<span>#{gallery.like_count}</span> likes".html_safe, like_gallery_path(gallery), class: 'button like_button', method: 'post', remote: true %>
+      <% else %>
+        <p><%= gallery.like_count %> likes</p>
+      <% end %>
+
+      <% if current_user  == gallery.user %>
+        <%= link_to 'Delete', gallery_path(gallery), method: :delete, confirm: 'Sure?', class: 'button tiny radius' %>
+        <%= link_to 'Edit', edit_gallery_path(gallery), class: 'button tiny radius' %>
+      <% end %>
     </div>
   <% end %>
 </div>
