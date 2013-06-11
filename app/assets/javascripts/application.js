@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.validate
+//= require vendor/custom.modernizr
 //= require backstretch
 //= require cocoon
 //= require foundation
