@@ -2,8 +2,8 @@
 
 FactoryGirl.define do
   factory :image do
-    title "MyString"
+    title       "MyString"
     description "MyText"
-    gallery nil
+    gallery     { FactoryGirl.create(:gallery) }
   end
 end

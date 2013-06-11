@@ -5,20 +5,25 @@ gem 'rails', '3.2.13'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+
 gem 'cocoon'
 gem 'carrierwave'
 gem 'rmagick'
-gem 'fog'
+
+group :production do
+  gem 'pg'
+  gem 'carrierwave-aws'
+end
 
 group :development, :test do
+  gem 'sqlite3'
   gem 'rspec-rails', '~> 2.0'
   gem 'factory_girl_rails'
 
 
 end
 
-group :development do
+group :development do 
   gem 'pry-rails'
   gem 'better_errors'
   gem 'meta_request'

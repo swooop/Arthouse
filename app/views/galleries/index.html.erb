@@ -14,7 +14,7 @@
   </div>
 </div>
 
-<hr class="style-one"/>
+<hr class="style-one row"/>
 
 <div class="row">
   <% @galleries.each do |gallery| %>
@@ -22,7 +22,7 @@
       <h4>
         <%= link_to gallery.title, gallery_path(gallery) %>
       </h4>
-      <%= image_tag gallery.images.first.artwork.url %>
+      <%= image_tag gallery.first_image.artwork.url if gallery.first_image %>
       <p><%= gallery.description %></p>
 
       <% if current_user != gallery.user %>
@@ -30,6 +30,7 @@
       <% else %>
         <p><%= gallery.like_count %> likes</p>
       <% end %>
+
 
       <% if current_user  == gallery.user %>
         <%= link_to 'Delete', gallery_path(gallery), method: :delete, confirm: 'Sure?', class: 'button tiny radius' %>

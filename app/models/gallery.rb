@@ -6,4 +6,9 @@ class Gallery < ActiveRecord::Base
   belongs_to :user
 
   validates :title, presence: true
+
+  def first_image
+    self.images.first if self.images.length > 0
+  end
+
 end

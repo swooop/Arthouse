@@ -24,6 +24,11 @@ describe User do
     expect(FactoryGirl.build(:user, name_last: nil)).not_to be_valid
   end
 
+  it "returns a users full name as a string" do
+    user = FactoryGirl.build(:user, name_first: "John", name_last: "Doe")
+    user.name_full.should == "John Doe"
+  end
+
   it "has an email address" do
     expect(user.email).to_not be_empty
   end
