@@ -1,10 +1,46 @@
 <div class="row">
   <div class="small-6 small-centered columns">
-    <h1 class="logo">The Arthouse</h1>
+    <h1 class="blkout">The Arthouse</h1>
   </div>
 </div>
+
+
+  
+<div class="row">
+  <% @galleries.each do |gallery| %>
+    <div class="small-2 columns">
+      <%= image_tag gallery.images.sample.artwork.url(:thumb) if gallery.first_image %>
+    </div>
+  <% end %>
+</div>
+
+
+
+  <div class ="row">
+    <div class ="small-4 columns">
+      <article>
+        <h3 class="logo"> Some artists details </h3>
+        <p> Really inspirational stuff about some totally hip stuff here. Buy me beer. </p>
+      </article>
+    </div>
+
+    <div class ="small-4 columns">
+      <article>
+        <h3 class="logo"> Some artists details </h3>
+        <p> Really inspirational stuff about some totally hip stuff here. Buy me beer. </p>
+      </article>
+    </div>
+
+    <div class ="small-4 columns">
+      <article>
+        <h3 class="logo"> Some artists details </h3>
+        <p> Really inspirational stuff about some totally hip stuff here. Buy me beer. </p>
+      </article>
+    </div>
+
+
 <!-- Picture box with backstetch-->
-  <div class="row">
+  <!-- <div class="row">
     <div class="large-10 large-centered columns">
       <ul id="featured1" data-orbit data-options="timer_speed:10000;">
         <li>
@@ -29,27 +65,4 @@
       
     </div>
   </div>
-
-  
-
-  <div class ="row">
-    <div class ="small-4 columns">
-      <article>
-        <h3 class="subheading"> Some artists details </h3>
-        <p> Really inspirational stuff about some totally hip stuff here. Buy me beer. </p>
-      </article>
-    </div>
-
-    <div class ="small-4 columns">
-      <article>
-        <h3 class="subheading"> Some artists details </h3>
-        <p> Really inspirational stuff about some totally hip stuff here. Buy me beer. </p>
-      </article>
-    </div>
-
-    <div class ="small-4 columns">
-      <article>
-        <h3 class="subheading"> Some artists details </h3>
-        <p> Really inspirational stuff about some totally hip stuff here. Buy me beer. </p>
-      </article>
-    </div>
+ -->
