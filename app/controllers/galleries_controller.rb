@@ -36,11 +36,11 @@ class GalleriesController < ApplicationController
   end
 
   def destroy
-
-    if gallery.delete
-      redirect_to galleries_path, notice: "Deleted #{gallery.title}"
+    @gallery = Gallery.find(params[:id])
+    if @gallery.delete
+      redirect_to galleries_path, notice: "Deleted #{@gallery.title}"
     else
-      redirect_to gallery_path(@gallery), flash: { errors: gallery.errors }
+      redirect_to gallery_path(@gallery), flash: { errors: @gallery.errors }
     end
   end
 

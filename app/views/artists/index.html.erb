@@ -8,8 +8,9 @@
   <% @users.each do |user| %>
     <div class="large-4 small-6 columns">
       <h4 class="logo"><%= user.name_full %></h4>
-      <p><% user.galleries.each do |gallery| %>
-        <%= link_to gallery.title, gallery, class: 'chunky_link' %></p>
+      <% user.galleries.each do |gallery| %>
+        <%= link_to gallery.title, gallery, class: 'chunky_link' %>
+        <br>
         <% end %>
     </div>
   <% end %>
