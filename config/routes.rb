@@ -12,8 +12,6 @@ Arthouse::Application.routes.draw do
   get     '/signup' => 'user#new', :as => :signup
   post    '/signup' => 'user#create', :as => :new_user
 
-  # post "signup" => 'users#create', :as => :signup
-
   root :to => 'site#index'
 
   
