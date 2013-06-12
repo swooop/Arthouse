@@ -47,12 +47,8 @@ leaguegothic-regular-webfont.ttf: leaguegothic-regular-webfont-ea7d429db4d61b68a
 leaguegothic-regular-webfont/index.ttf: leaguegothic-regular-webfont-ea7d429db4d61b68abf342391868036e.ttf
 leaguegothic-regular-webfont.woff: leaguegothic-regular-webfont-47f3a5608bfd25e314455afff11c8a38.woff
 leaguegothic-regular-webfont/index.woff: leaguegothic-regular-webfont-47f3a5608bfd25e314455afff11c8a38.woff
-bird.jpg: bird-62d5ba08ec6c5127167ae01477ba5670.jpg
-bird/index.jpg: bird-62d5ba08ec6c5127167ae01477ba5670.jpg
-cow.jpg: cow-ff025cad54e3cd779f65830d1ca782c1.jpg
-cow/index.jpg: cow-ff025cad54e3cd779f65830d1ca782c1.jpg
-rails.png: rails-a3386665c05a2d82f711a4aaa72d247c.png
-rails/index.png: rails-a3386665c05a2d82f711a4aaa72d247c.png
+octo_github.png: octo_github-9bf4d8d799a2c0db37613b9f8d18394a.png
+octo_github/index.png: octo_github-9bf4d8d799a2c0db37613b9f8d18394a.png
 river.jpg: river-3cb4296cc83740ef055c1e96956c1fa6.jpg
 river/index.jpg: river-3cb4296cc83740ef055c1e96956c1fa6.jpg
 texturedbg.jpg: texturedbg-89c41bc3edae2507601da9aae349edaa.jpg
