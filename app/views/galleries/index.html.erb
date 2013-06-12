@@ -7,7 +7,7 @@
 
 <div class="row">
   <div class="small-4 columns">
-    <h3> Add a New Gallery </h3>
+    <h3 class="chunky_link"> Add a New Gallery </h3>
   </div>
   <div class="small-8 columns">
     <%= link_to 'Add', new_gallery_path, class: 'button radius' %>
@@ -19,7 +19,7 @@
 <div class="row">
   <% @galleries.each do |gallery| %>
     <div class="small-4 columns">
-      <h4>
+      <h4 class="chunky_link">
         <%= link_to gallery.title, gallery_path(gallery) %>
       </h4>
       <%= image_tag gallery.first_image.artwork.url if gallery.first_image %>
