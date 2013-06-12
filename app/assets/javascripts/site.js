@@ -2,3 +2,10 @@
 // All this logic will automatically be available in application.js.
 
 
+$('.patchwork').hover(
+       function(){ 
+          $(this).addClass('elevate');},
+
+       function(){
+          $(this).removeClass('elevate');}
+);

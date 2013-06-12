@@ -11,7 +11,7 @@ class Gallery < ActiveRecord::Base
     self.images.first if self.images.length > 0
   end
 
-  def thumb
+  def random_thumb
     self.images.sample(:thumb) if self.images.length > 0
   end
 

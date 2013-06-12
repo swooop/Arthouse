@@ -54,6 +54,10 @@
 
 }
 
+body {
+  background-color: #d4dfd0;
+}
+
 
 .row { background: url('wavegrid.png') repeat repeat;
 
@@ -80,4 +84,16 @@ div.row.collapse {
 }
 
 
+.elevate {
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    transition: all .5s ease;
+   
+   /*Glow*/
+  -webkit-box-shadow: 0 0 2em rgba(170,170,170,0.9);
+  -moz-box-shadow: 0 0 2em rgba(170,170,170,0.9);
+  box-shadow: 0 0 2em rgba(170,170,170,0.9); 
+
+  -webkit-transform: rotate(.5deg) scale(1.2) ;
+}
 

@@ -1,6 +1,14 @@
-<h2>Create a new gallery</h2>
+<div class="row">
+  <div class="small-6 small-centered columns">
+    <h2 class="logo">Create a new gallery</h2>
+  </div>
+</div>
 
-<%= form_for @gallery, html: { multipart: true, id: 'upload-form' }, url: galleries_path do |f| %>
-  <%= render partial: 'fields', locals: { f: f }, required: true %>
-  <%= f.submit "Submit", class: 'button radius' %>
-<% end %>
+<div class="row">
+  <div class="small-8 columns">
+    <%= form_for @gallery, html: { multipart: true, id: 'upload-form' }, url: galleries_path do |f| %>
+    <%= render partial: 'fields', locals: { f: f }, required: true %>
+    <%= f.submit "Submit", class: 'button radius' %>
+    <% end %>
+  </div>
+</div>

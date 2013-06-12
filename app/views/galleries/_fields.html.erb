@@ -1,11 +1,15 @@
 
   <%= render 'shared/error_messages', object: f.object %>
-  <%= f.label :title %>
+  <%= f.label :Gallery_Title, class: 'logo' %>
   <%= f.text_area :title, :placeholder => 'Add or update a title' %>
   <%= f.text_area :description, :placeholder => 'Add or update the gallery description' %>
 
-  <h3>Images</h3>
-  <div id="images">
+  <hr class="style-one" />
+  
+
+  <h3 class="logo">Add some images to your Gallery</h3>
+
+  <div id="images" class="logo">
     <%= f.fields_for :images do |image| %>
       <%= render 'image_fields', :f => image %>
     <% end %>

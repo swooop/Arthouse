@@ -12,11 +12,12 @@
   </div>
 
   <div class="field">
-    <%= f.label :artwork %>
+    <%= f.label :Choose_your_artwork  %>
     <%= f.file_field :artwork %>
   </div>
 
   <%# image_tag @gallery.image_url(:thumb).to_s %>
 
-  <%= link_to_remove_association "remove image", f %>
+  <%= link_to_remove_association "remove image", f, class: 'tiny radius button alert' %>
+  <hr class="style-one" />
 </div>

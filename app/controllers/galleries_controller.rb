@@ -36,6 +36,7 @@ class GalleriesController < ApplicationController
   end
 
   def destroy
+
     if gallery.delete
       redirect_to galleries_path, notice: "Deleted #{gallery.title}"
     else
