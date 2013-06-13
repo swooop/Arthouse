@@ -22,7 +22,8 @@
 <hr class="style-one row"/>
 
 <div class="row">
-  <% @galleries.each do |gallery| %>
+  <% @galleries.each_with_index do |gallery, index| %>
+
     <div class="small-4 columns">
       <h4 class="chunky_link">
         <%= link_to gallery.title, gallery_path(gallery) %>
@@ -42,6 +43,12 @@
         <%= link_to 'Edit', edit_gallery_path(gallery), class: 'button tiny radius' %>
       <% end %>
     </div>
+
+    <% if (index + 1).modulo(3).zero? %>
+      </div>
+      <div class="row">
+    <% end unless index == 0 %>
+
   <% end %>
 </div>
 
