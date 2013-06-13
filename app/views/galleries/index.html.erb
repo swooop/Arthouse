@@ -7,14 +7,14 @@
 
 <div class="row">
   <div class="small-4 columns">
-    <h3 class="chunky_link"> Add a New Gallery </h3>
+    <h3 class="chunky_link">Add a New Gallery</h3>
   </div>
   <div class="small-8 columns">
     <% if current_user %>
       <%= link_to 'Add', new_gallery_path, class: 'button radius' %>
     <% else %>
-      <p>To Add a Gallery, register with us</p>
-      <% link_to 'Register', new_user_path, class: 'button radius' %>
+      <h3 class="chunky_link">To Add a Gallery, register with us</h3>
+      <%= link_to 'Register', new_user_path, class: 'button radius' %>
     <% end %>
   </div>
 </div>
